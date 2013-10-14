@@ -1,10 +1,10 @@
 <h2>Enter your new video details</h2>
 <form method="post" action="/videos/update">
   <label for="title">Title</label>
-  <input name="title" placeholder="Your video name here" value="<%= @video['name'] %>">
+  <input name="title" placeholder="Your video name here" value="<%= @video['title'] %>">
 
   <label for="url">Url:</label>
-  <textarea name="url"><%= @video['url'] %></textarea>
+  <textarea name="url">http://youtu.be/<%= @video['url'] %></textarea>
 
   <label for="genre">Genre:</label>
   <input name="genre" type="text" placeholder="Your video genre here" value="<%= @video['genre'] %>">

@@ -17,7 +17,7 @@ get '/videos/new' do
 end
 
 post '/videos/create' do
-  query = "INSERT INTO videos (title, url, genre) VALUES ('#{params[:video_name]}', '#{params["url"].to_s.split('/')[-1]}', '#{params[:genre]}')"
+  query = "INSERT INTO videos (title, url, genre) VALUES ('#{params[:video_name]}', '#{params["url"].split('/')[-1]}', '#{params[:genre]}')"
   connect(query)
   #binding.pry
   redirect to '/'
@@ -30,7 +30,7 @@ get '/videos/:id' do
   if @video.nil?
     redirect to '/'
   end
-  erb :productview
+  erb :videoview
 end
 
 get'/videos/:id/delete' do
@@ -46,7 +46,7 @@ get '/videos/:id/edit' do
 end
 
 post '/videos/update' do
-  query = "UPDATE videos SET title='#{params[:title].gsub(/'/, "\'")}', url='#{params[:url].gsub(/'/, "\'")}', genre='#{params[:genre]}' WHERE id=#{params[:id]}"
+  query = "UPDATE videos SET title='#{params[:title].gsub(/'/, "\'")}', url='#{params[:url].split('/')[-1]}', genre='#{params[:genre]}' WHERE id=#{params[:id]}"
   connect(query)
   redirect to "/videos/#{params[:id]}"
 
