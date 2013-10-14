@@ -1,12 +1,12 @@
 <h2>Enter your new product details</h2>
-<form method="post" action="/products/create">
-  <label for="name">Name</label>
-  <input name="name" placeholder="Your product name here">
+<form method="post" action="/videos/create">
+  <label for="title">Title</label>
+  <input title="title" placeholder="Your video title goes here">
 
-  <label for="description">Description:</label>
-  <textarea name="description"></textarea>
+  <label for="video_url">URL:</label>
+  <textarea name="video_url"></textarea>
 
-  <label for="price">Price:</label>
-  <input name="price" type="number" placeholder="Your product price here" step="0.01">
+  <label for="genre">Genre:</label>
+  <input name="genre" type="text" placeholder="Your product genre here">
   <input type="submit" value="Create">
 </form>

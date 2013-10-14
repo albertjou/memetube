@@ -1,14 +1,14 @@
-<h2>Enter your new product details</h2>
-<form method="post" action="/products/update">
-  <label for="name">Name</label>
-  <input name="name" placeholder="Your product name here" value="<%= @product['name'] %>">
+<h2>Enter your new video details</h2>
+<form method="post" action="/videos/update">
+  <label for="title">Title</label>
+  <input name="title" placeholder="Your video name here" value="<%= @video['name'] %>">
 
-  <label for="description">Description:</label>
-  <textarea name="description"><%= @product['description'] %></textarea>
+  <label for="url">Url:</label>
+  <textarea name="url"><%= @video['url'] %></textarea>
 
-  <label for="price">Price:</label>
-  <input name="price" type="number" placeholder="Your product price here" step="0.01" value="<%= @product['price'] %>">
+  <label for="genre">Genre:</label>
+  <input name="genre" type="text" placeholder="Your product genre here" value="<%= @video['genre'] %>">
 
-  <input type="hidden" name="id" value="<%= @product['id'] %>">
+  <input type="hidden" name="id" value="<%= @video['id'] %>">
   <input type="submit" value="Update">
 </form>

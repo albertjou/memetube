@@ -4,53 +4,53 @@ require 'pg'
 require 'pry'
 
 get '/' do
-  @products = connect("SELECT * FROM products")
+  @videos = connect("SELECT * FROM videos")
   erb :index
 
 end
 
-get '/products/new' do
+get '/videos/new' do
   erb :form
 end
 
-post '/products/create' do
-  query = "INSERT INTO products (name, description, price) VALUES ('#{params[:name].gsub(/'/, "\'")}', '#{params[:description].gsub(/'/, "\'")}', '#{params[:price]}')"
+post '/videos/create' do
+  query = "INSERT INTO videos (title, url, genre) VALUES ('#{params[:title]}', '#{params[:video_url]}', '#{params[:genre]}')"
   connect(query)
   redirect to '/'
 end
 
-get '/products/:id' do
-  @product = connect("SELECT * FROM products WHERE id=#{params[:id]}")
-  @product = @product.first
+get '/videos/:id' do
+  @video = connect("SELECT * FROM videos WHERE id=#{params[:id]}")
+  @video = @video.first
 
-  if @product.nil?
+  if @video.nil?
     redirect to '/'
   end
   erb :productview
 end
 
-get'/products/:id/delete' do
-  @product = connect("DELETE FROM products WHERE id=#{params[:id]}")
+get'/videos/:id/delete' do
+  @video = connect("DELETE FROM videos WHERE id=#{params[:id]}")
   redirect to '/'
 end
 
 
-get '/products/:id/edit' do
-  @product = connect("SELECT * FROM products WHERE id=#{params[:id]}")
-  @product = @product.first
+get '/videos/:id/edit' do
+  @video = connect("SELECT * FROM videos WHERE id=#{params[:id]}")
+  @video = @video.first
   erb :edit
 end
 
-post '/products/update' do
-  query = "UPDATE products SET name='#{params[:name].gsub(/'/, "\'")}', description='#{params[:description].gsub(/'/, "\'")}', price='#{params[:price]}' WHERE id=#{params[:id]}"
+post '/videos/update' do
+  query = "UPDATE videos SET title='#{params[:title].gsub(/'/, "\'")}', url='#{params[:url].gsub(/'/, "\'")}', genre='#{params[:genre]}' WHERE id=#{params[:id]}"
   connect(query)
-  redirect to "/products/#{params[:id]}"
+  redirect to "/videos/#{params[:id]}"
 
 end
 
 
 def connect(query)
-    connection = PG.connect(:dbname => 'wdistore', :host => 'localhost')
+    connection = PG.connect(:dbname => 'memetube', :host => 'localhost')
     result = connection.exec(query)
     connection.close
     result

@@ -1,7 +1,7 @@
-<h2>Products Available</h2>
+<h2>Videos available</h2>
 <ul>
-  <li>Product list goes here</li>
-  <% @products.each do |product| %>
-    <li><a href="/products/<%= product['id'] %>"><%= product['name'] %></a></li>
+  <li>Video list goes here</li>
+  <% @videos.each do |video| %>
+    <li><a href="/video/<%= video['id'] %>"><%= video['title'] %></a></li>
   <% end %>
 </ul>
