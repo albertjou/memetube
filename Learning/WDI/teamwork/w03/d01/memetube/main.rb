@@ -7,6 +7,8 @@ require 'pry'
 get '/' do
   #get all the videos
   @videos = connect("SELECT * FROM videos")
+  @videos = @videos.map {|hash| hash}
+  @genres = @videos.map {|x| x["genre"].to_s}
   #link to the index page
   erb :index
 end
@@ -52,6 +54,19 @@ post '/videos/update' do
 
 end
 
+get '/genre/:genre' do
+  @videos = connect("SELECT * FROM videos")
+  @genres = @videos.map {|x| x["genre"].to_s}
+  @list = @videos.map {|hash| hash}
+  new_list = []
+  @list.map {|x|
+    if x.has_value?(params[:genre].to_s.gsub("+"," "))
+      new_list << x
+    end
+  }
+  @videos = new_list
+  erb :index
+end
 
 def connect(query)
     connection = PG.connect(:dbname => 'memetube', :host => 'localhost')

@@ -138,3 +138,36 @@ input{
   margin-left: 80%;
 }
 
+a:visited {
+  color: inherit;
+}
+a:hover {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.filter {
+  display: inline;
+}
+
+br {
+  clear: all;
+}
+
+.filter ul {
+  padding-top: 10px;
+  display: inline-block;
+}
+.filter li {
+  margin-right: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  display: inline;
+  background: #9B8787;
+  border: 1px solid #5C5050;
+  text-align: center;
+}
+
+.filter a:hover {
+  background-color: #bada55;
+}
