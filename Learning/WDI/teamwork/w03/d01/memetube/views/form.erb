@@ -1,12 +1,26 @@
-<h2>Enter your new product details</h2>
+<h2>Enter new product details</h2>
 <form method="post" action="/videos/create">
-  <label for="video_name">Title</label>
-  <input title="video_name" placeholder="Your video title goes here" name="video_name">
+  <div class="title">
+    <label for="video_name">Title</label>
+    <input title="video_name" placeholder="Video title" name="video_name">
+  </div>
 
-  <label for="url">URL:</label>
-  <textarea name="url"></textarea>
+  <div class="url">
+    <label for="url">URL</label>
+    <textarea name="url">Video URL</textarea>
+  </div>
 
-  <label for="genre">Genre:</label>
-  <input name="genre" type="text" placeholder="Your product genre here">
-  <input class="button" type="submit" value="Create">
+  <div class="genre">
+    <label for="genre">Genre</label>
+    <select name="genre">
+      <option value="genre1">Animation</option>
+      <option value="genre2">Comedy</option>
+      <option value="genre3">Drama</option>
+      <option value="genre4">Reality &amp; Game Shows</option>
+      <option value="genre5">Documentary</option>
+      <option selected>Genre Options</option>
+    </select>
+  </div>
+
+  <input class="button createVideo" type="submit" value="Create">
 </form>

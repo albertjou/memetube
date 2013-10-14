@@ -1,14 +1,31 @@
-<h2>Enter your new video details</h2>
+<h2>Update video details</h2>
 <form method="post" action="/videos/update">
-  <label for="title">Title</label>
-  <input name="title" placeholder="Your video name here" value="<%= @video['title'] %>">
+  <div class="title">
+    <label for="title">Title</label>
+    <input name="title" placeholder="Your video name here" value="<%= @video['title'] %>">
+  </div>
 
-  <label for="url">Url:</label>
-  <textarea name="url">http://youtu.be/<%= @video['url'] %></textarea>
+  <div class="url">
+    <label for="url">URL</label>
+    <textarea name="url">http://youtu.be/<%= @video['url'] %></textarea>
+  </div>
 
-  <label for="genre">Genre:</label>
-  <input name="genre" type="text" placeholder="Your video genre here" value="<%= @video['genre'] %>">
+  <div class="genre">
+    <!-- input name="genre" type="text" placeholder="Your video genre here" value="<%= @video['genre'] %>"-->
+
+    <div class="genre">
+      <label for="genre">Genre</label>
+      <select name="genre">
+        <option value="animation">Animation</option>
+        <option value="comedy">Comedy</option>
+        <option value="drama">Drama</option>
+        <option value="reality">Reality &amp; Game Shows</option>
+        <option value="documentary">Documentary</option>
+        <option selected><%= @video['genre'] %></option>
+      </select>
+    </div>
+   </div>
 
   <input type="hidden" name="id" value="<%= @video['id'] %>">
-  <input class="button" type="submit" value="Update">
+  <input class="button updateVideo" type="submit" value="Update">
 </form>

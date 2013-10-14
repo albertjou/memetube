@@ -31,8 +31,7 @@
     height: 100%;
   }
 body{
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#23127F), to(#371CCC), color-stop(.6,#333333));
-  width: 960px;
+  background: -webkit-linear-gradient(left, #2F2727, #1a82f7, #2F2727, #1a82f7, #2F2727);  width: 960px;
   margin: auto;
   font-family: Helvetica;
   color: white;
@@ -52,14 +51,14 @@ h1{
 
 /*Menu*/
 nav{
-  margin-left: 70%;
+  margin-left: 80%;
 }
 nav ul{
   list-style: none;
 }
 nav ul li{
   display: inline;
-  margin: 0 1em;
+  margin: 0;
 }
 nav a{
   text-decoration: none;
@@ -94,7 +93,7 @@ nav a{
   padding: 5px;
 }
 .videoView a{
-  color: white;
+  color: #333;
   text-decoration: none;
 }
 #delete{
@@ -107,5 +106,35 @@ nav a{
   float: left;
 }
 
+/*Add new video*/
+form{
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px dotted white;
+}
+div{
+  padding: 10px;
+  margin: 0 10px;
+  font-size: 1em;
+}
+label{
+  float: left;
+  text-align: right;
+  margin-right: 15px;
+  width: 100px;
+  padding-top: 5px;
+}
+input{
+  padding: 5px;
+  font-family: Helvetica, sans-serif;
 
+}
+.createVideo{
+  display: inline;
+  margin-left: 80%;
+}
+.updateVideo{
+  display: inline;
+  margin-left: 80%;
+}
 
