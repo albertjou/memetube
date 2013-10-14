@@ -1,6 +1,6 @@
 <ul>
   <li><strong>Title</strong>: <%= @video['title'] %></li>
-  <li><strong>URL</strong>: <p><%= @video['url'] %></p></li>
+  <li><strong>URL</strong>: <p><a href="http://youtu.be/<%= @video['url'] %>">http://youtu.be/<%= @video['url'] %></a></p></li>
   <li><strong>Genre</strong>: $<%= @video['genre'] %></li>
   <li><a href="/videos/<%= @video['id'] %>/delete">Delete</a></li>
   <li><a href="/videos/<%= @video['id'] %>/edit">Edit</a></li>
