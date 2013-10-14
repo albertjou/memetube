@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h2>Videos available</h2>
 <!--list all the videos returned from the db select -->
 <ul>
@@ -23,3 +24,16 @@
 
 
 
+=======
+<div class="videoIndex">
+  <h2>Videos available</h2>
+  <!--list all the videos returned from the db select -->
+  <ul>
+    <!--loop through each video returned in the select -->
+    <% @videos.each do |video| %>
+      <!-- build a list of links to each video returned from the query -->
+      <li><a href="/videos/<%= video['id'] %>"><%= video['title'] %></a></li>
+    <% end %>
+  </ul>
+</div>
+>>>>>>> 3137115294659b68b4e4176e9726501cab97b143
