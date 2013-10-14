@@ -1,17 +1,21 @@
 <!doctype html>
 <html>
-<head>
-  <title>MemeTube</title>
-</head>
-<body>
+  <head>
+    <title>MemeTube</title>
+    <link href='http://fonts.googleapis.com/css?family=Codystar' rel='stylesheet' type='text/css'></link>
+    <link rel="stylesheet" href="/style.css"
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/videos/new">New Video</a></li>
+      </ul>
+    </nav>
 
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/videos/new">New Video</a></li>
-    </ul>
-  </nav>
-  <h1>Videos</h1>
-  <%= yield %>
-</body>
+    <h1>Videos</h1>
+
+    <%= yield %>
+
+  </body>
 </html>
