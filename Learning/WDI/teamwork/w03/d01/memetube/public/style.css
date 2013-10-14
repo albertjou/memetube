@@ -1,11 +1,58 @@
+/*Generic layout*/
+.button {
+    position: relative;
+    overflow: visible;
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid #d4d4d4;
+    margin: 0;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 0 #fff;
+    font:11px/normal sans-serif;
+    color: #333;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    background-color: #ececec;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+    background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+    background-image: -ms-linear-gradient(#f4f4f4, #ececec);
+    background-image: -o-linear-gradient(#f4f4f4, #ececec);
+    background-image: linear-gradient(#f4f4f4, #ececec);
+    -moz-background-clip: padding; /* for Firefox 3.6 */
+    background-clip: padding-box;
+    border-radius: 0.2em;
+    /* IE hacks */
+    zoom: 1;
+    *display: inline;
+  }
+  html{
+    height: 100%;
+  }
 body{
-
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#23127F), to(#371CCC), color-stop(.6,#333333));
+  width: 960px;
+  margin: auto;
+  font-family: Helvetica;
+  color: white;
+  line-height: 1.5em;
+  height: 100%;
 }
 h1, h2{
   font-family: 'Codystar', cursive;
+  font-size: 2em;
+  padding: 20px;
+  margin: 20px;
 }
+h1{
+  text-align: center;
+  font-size: 3em;
+}
+
+/*Menu*/
 nav{
-  border-bottom: 1px solid pink;
+  margin-left: 70%;
 }
 nav ul{
   list-style: none;
@@ -14,3 +61,51 @@ nav ul li{
   display: inline;
   margin: 0 1em;
 }
+nav a{
+  text-decoration: none;
+  color: white;
+}
+.videoList{
+  padding: 20px;
+  margin;bottom: 20px;
+}
+/*List of available videos on the landing page*/
+.videoIndex ul{
+  border: 1px dotted white;
+  padding: 20px 0 20px 30px;
+  margin: 20px;
+  list-style: none;
+}
+.videoIndex a{
+  display: inline;
+  color: white;
+  text-decoration: none;
+  line-height: 1.5em;
+}
+
+/*Viewing of individual videos*/
+.videoView ul{
+  list-style: none;
+  color: white;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.videoView li{
+  padding: 5px;
+}
+.videoView a{
+  color: white;
+  text-decoration: none;
+}
+#delete{
+  display: inline;
+  margin-left: 60%;
+}
+#delete{
+  display: inline;
+  margin-left: 70%;
+  float: left;
+}
+
+
+

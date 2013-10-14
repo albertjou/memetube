@@ -1,10 +1,11 @@
 <div class="videoView">
+  <h2>Video Information</h2>
   <ul>
     <li><strong>Title</strong>: <%= @video['title'] %></li>
     <li><iframe width="560" height="315" src="http://www.youtube.com/embed/<%= @video['url'] %>" frameborder="0" allowfullscreen></iframe></li>
-    <li><strong>URL</strong>: <p><a href="http://youtu.be/<%= @video['url'] %>" target="_blank">http://youtu.be/<%= @video['url'] %></a></p></li>
+    <li><strong>URL</strong>: <a href="http://youtu.be/<%= @video['url'] %>" target="_blank">http://youtu.be/<%= @video['url'] %></a></li>
     <li><strong>Genre</strong>: <%= @video['genre'] %></li>
-    <li><a href="/videos/<%= @video['id'] %>/delete">Delete</a></li>
-    <li><a href="/videos/<%= @video['id'] %>/edit">Edit</a></li>
+    <li id="delete"><a class="button" href="/videos/<%= @video['id'] %>/delete">Delete</a></li>
+    <li id="edit"><a class="button" href="/videos/<%= @video['id'] %>/edit">Edit</a></li>
   </ul>
 </div>
