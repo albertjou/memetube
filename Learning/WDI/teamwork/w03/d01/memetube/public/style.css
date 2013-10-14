@@ -1,0 +1,16 @@
+body{
+
+}
+h1, h2{
+  font-family: 'Codystar', cursive;
+}
+nav{
+  border-bottom: 1px solid pink;
+}
+nav ul{
+  list-style: none;
+}
+nav ul li{
+  display: inline;
+  margin: 0 1em;
+}
