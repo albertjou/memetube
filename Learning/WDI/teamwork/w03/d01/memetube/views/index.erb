@@ -8,16 +8,14 @@
       <li><a href="/videos/<%= video['id'] %>"><%= video['title'] %></a></li>
     <% end %>
   </ul>
-</div>
-
+</div><!-- videoIndex -->
 <br />
-
 <!--Filter by GENRE -->
 <div class="filter">
   <h3>Filter by Genre</h3>
   <ul>
-    <% @genres.each do |genre| %>
     <li><a href="/">All</a></li>
+    <% @genres.each do |genre| %>
       <li><a href="/genre/<%= "#{genre.gsub(' ','+')}" %>"><%= "#{genre}" %></a></li>
     <% end %>
   </ul>

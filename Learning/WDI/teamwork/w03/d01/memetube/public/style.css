@@ -1,35 +1,35 @@
 /*Generic layout*/
 .button {
-    position: relative;
-    overflow: visible;
-    display: inline-block;
-    padding: 0.5em 1em;
-    border: 1px solid #d4d4d4;
-    margin: 0;
-    text-decoration: none;
-    text-align: center;
-    text-shadow: 1px 1px 0 #fff;
-    font:11px/normal sans-serif;
-    color: #333;
-    white-space: nowrap;
-    cursor: pointer;
-    outline: none;
-    background-color: #ececec;
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
-    background-image: -moz-linear-gradient(#f4f4f4, #ececec);
-    background-image: -ms-linear-gradient(#f4f4f4, #ececec);
-    background-image: -o-linear-gradient(#f4f4f4, #ececec);
-    background-image: linear-gradient(#f4f4f4, #ececec);
-    -moz-background-clip: padding; /* for Firefox 3.6 */
-    background-clip: padding-box;
-    border-radius: 0.2em;
-    /* IE hacks */
-    zoom: 1;
-    *display: inline;
-  }
-  html{
-    height: 100%;
-  }
+  position: relative;
+  overflow: visible;
+  display: inline-block;
+  padding: 0.5em 1em;
+  border: 1px solid #d4d4d4;
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 1px 1px 0 #fff;
+  font:11px/normal sans-serif;
+  color: #333;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  background-color: #ececec;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+  background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+  background-image: -ms-linear-gradient(#f4f4f4, #ececec);
+  background-image: -o-linear-gradient(#f4f4f4, #ececec);
+  background-image: linear-gradient(#f4f4f4, #ececec);
+  -moz-background-clip: padding; /* for Firefox 3.6 */
+  background-clip: padding-box;
+  border-radius: 0.2em;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+}
+html{
+  height: 100%;
+}
 body{
   background: -webkit-linear-gradient(left, #2F2727, #1a82f7, #2F2727, #1a82f7, #2F2727);  width: 960px;
   margin: auto;
@@ -48,7 +48,12 @@ h1{
   text-align: center;
   font-size: 3em;
 }
-
+a:visited {
+  color: inherit;
+}
+a:hover {
+  text-transform: uppercase;
+}
 /*Menu*/
 nav{
   margin-left: 80%;
@@ -66,7 +71,7 @@ nav a{
 }
 .videoList{
   padding: 20px;
-  margin;bottom: 20px;
+  margin-bottom: 20px;
 }
 /*List of available videos on the landing page*/
 .videoIndex ul{
@@ -138,16 +143,11 @@ input{
   margin-left: 80%;
 }
 
-a:visited {
-  color: inherit;
-}
-a:hover {
-  text-decoration: underline;
-  text-transform: uppercase;
-}
-
+/*Genre filtering stylesheet*/
 .filter {
-  display: inline;
+
+  padding: 40px;
+  margin-bottom: 20px;
 }
 
 br {
@@ -155,19 +155,28 @@ br {
 }
 
 .filter ul {
-  padding-top: 10px;
-  display: inline-block;
-}
-.filter li {
-  margin-right: 20px;
-  padding: 20px;
-  border-radius: 20px;
   display: inline;
-  background: #9B8787;
-  border: 1px solid #5C5050;
-  text-align: center;
+  list-style: none;
+}
+
+.filter a {
+  color: #fff;
+  margin: 0;
+  padding: 3px 10px;
+  background-color: #0187c5;
+  border-radius: 3px;
+  text-decoration: none;
+  text-transform: lowercase;
+  line-height: 24px;
+  font-size: 12px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 inset,
+    rgba(0, 0, 0, 0.1) 0 1px 4px;
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.3);
+  display: inline;
+  float: left;
 }
 
 .filter a:hover {
   background-color: #bada55;
+  text-transform: uppercase;
 }
