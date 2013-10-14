@@ -14,8 +14,9 @@ get '/videos/new' do
 end
 
 post '/videos/create' do
-  query = "INSERT INTO videos (title, url, genre) VALUES ('#{params[:title]}', '#{params[:video_url]}', '#{params[:genre]}')"
+  query = "INSERT INTO videos (title, url, genre) VALUES ('#{params[:video_name]}', '#{params[:url]}', '#{params[:genre]}')"
   connect(query)
+  binding.pry
   redirect to '/'
 end
 
